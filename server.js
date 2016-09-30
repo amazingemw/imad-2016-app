@@ -10,15 +10,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/page1',function(req, res){
-    res.send("The page one of my webpage is accesible via net");
+    res.sendFile(path.join(__dirname, 'ui', 'page1.html'));
 });
 
 app.get('/page2',function(req, res){
-    res.send("The page two of my webpage is accesible via net");
+     res.sendFile(path.join(__dirname, 'ui', 'page1.html'));
 });
 
 app.get('/page3',function(req, res){
-    res.send("The page three of my webpage is accesible via net");
+    res.sendFile(path.join(__dirname, 'ui', 'page1.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
