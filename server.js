@@ -17,11 +17,11 @@ var pageone ={
                 <p><i>Plastic unicorns made my day, burping rainbows all the way Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>`
 }
 
-function createTemplate (data){
+function createTemplate(data){
     var title = data.title;
     var date = data.date
     var heading = data.heading;
-    var content = data.contenet;
+    var content = data.content;
 }
 
 var htmltemplate = `
