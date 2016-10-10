@@ -5,16 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var pageOne = {
-    title: 'Page One|emwhack',
-    heading:'Ringostarr!!',
-    date: '5th September 2016',
-    content: `<p><i>The day turned to night, yet my dog never learned to bite. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>
+var articles = {
+    pageOne:{
+            title: 'Page One|emwhack',
+            heading:'Page One',
+            date: '5th September 2016',
+            content: `<p><i>The day turned to night, yet my dog never learned to bite. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>
+                    <div>
+                        <p><b>Ever been to the moon, but had to return because there was no saloon? Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</b></p>
+                    </div>
+                    <div>
+                        <p><i>Plastic unicorns made my day, burping rainbows all the way Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>`
+    },
+    leafTwo:{
+            title: 'Leaf Two|emwhack',
+            heading:'Leaf Two',
+            date: '6th September 2016',
+            content: `<p><i>T'was a mesmerizing sight, swan and star, a priceless delight</i></p>
             <div>
-                <p><b>Ever been to the moon, but had to return because there was no saloon? Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</b></p>
+                <p><b>The leaves of Konoha are turning yellow, but not the Hyuga</b></p>
             </div>
             <div>
-                <p><i>Plastic unicorns made my day, burping rainbows all the way Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>`
+                <p><i>Bricks break my parts just as chicks break my heart </i></p>`
+    },
+    scrollThree:{
+                title: 'Scroll Three|emwhack',
+                heading:'Scroll Three',
+                date: '7th September 2016',
+                content:`<p><i>The wrong side of the tree is not worth buying, it's just free</i></p>
+                </div>
+                <div>
+                <p><b>Chairs and tables mix and match to form cats and dogs</b></p>
+                </div>
+                <div>
+                <p><i>Rapid prototyping is all it does when asked to cook me some food</i></p>`
+    }
 };
 
 function createTemplate (data){
@@ -67,11 +92,11 @@ app.get('/page1',function(req, res){
 });
 
 app.get('/page2',function(req, res){
-     res.sendFile(path.join(__dirname, 'ui', 'page2.html'));
+     res.send(createTemplate(leafTwo));
 });
 
 app.get('/page3',function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'page3.html'));
+    res.send(createTemplate(scrollThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
