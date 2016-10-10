@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var pageOne = {
     title: 'Page One|emwhack',
-    heading:'Page One',
+    heading:'Ringostarr!!',
     date: '5th September 2016',
     content: `<p><i>The day turned to night, yet my dog never learned to bite. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment. Filler Text is a big embarassment to the establishment.</i></p>
             <div>
