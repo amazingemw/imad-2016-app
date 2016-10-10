@@ -5,9 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: Page1
-};
+
 
 
 app.get('/', function (req, res) {
