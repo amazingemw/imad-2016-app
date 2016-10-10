@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne = {
-    title: 
-}
+    title: Page1
+};
 
 
 app.get('/', function (req, res) {
