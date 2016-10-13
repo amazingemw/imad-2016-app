@@ -20,8 +20,7 @@ button.onclick = function(){
 
 };
     
-//Submit name
-
+ 
 var submit = document.getElementById("submit_btn");
 submit.onclick = function (){
     //MAke request to server and send the name
@@ -44,9 +43,11 @@ submit.onclick = function (){
         }
         //Not Do  ne yet
     };
-    //Make the request
+    
+    //Here name is only extracted when button is clicked leading to error free execution
     var nameInput = document.getElementById("name");
     var name = nameInput.value;
+    //Make the request
     request.open('GET', 'http://amazingemw.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
     
