@@ -12,7 +12,7 @@ button.onclick = function(){
                 span.innerHTML = counter.toString();
             }
         }
-        //Not Done yet
+        //Not Do  ne yet
     };
     //Make the request
     request.open('GET', 'http://amazingemw.imad.hasura-app.io/counter',true);
