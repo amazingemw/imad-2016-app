@@ -21,8 +21,7 @@ button.onclick = function(){
 };
     
 //Submit name
-var nameInput = document.getElementById("name");
-var name = nameInput.value;
+
 var submit = document.getElementById("submit_btn");
 submit.onclick = function (){
     //MAke request to server and send the name
@@ -46,6 +45,8 @@ submit.onclick = function (){
         //Not Do  ne yet
     };
     //Make the request
+    var nameInput = document.getElementById("name");
+    var name = nameInput.value;
     request.open('GET', 'http://amazingemw.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
     
